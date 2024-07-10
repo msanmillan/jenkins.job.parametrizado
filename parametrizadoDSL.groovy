@@ -1,14 +1,14 @@
 job('ejemplo2-job-DSL') {
 	description('Job DSL de ejemplo para el curso de Jenkins')
   	scm {
-      		git('https://github.com/macloujulian/jenkins.job.parametrizado.git', 'main') { node ->
-        		node / gitConfigName('macloujulian')
-        		node / gitConfigEmail('macloujulian@gmail.com')
+      		git('https://github.com/msanmillan/jenkins.job.parametrizado.git', 'main') { node ->
+        		node / gitConfigName('msanmillan')
+        		node / gitConfigEmail('jsanmillanunzaga@gmail.com')
       		}
     	} 
   	parameters {
-   		stringParam('nombre', defaultValue = 'Julian', description = 'Parametro de cadena para el Job Booleano')
-      		choiceParam('planeta', ['Mercurio', 'Venus', 'Tierrra', 'Marte', 'Jupiter', 'Saturno', 'Urano', 'Neptuno'])
+   		stringParam('nombre', defaultValue = 'Mario', description = 'Parametro de cadena para el Job Booleano')
+      		choiceParam('ciudad', ['Madrid', 'Sevilla', 'Barcelona', 'Valladolid'])
       		booleanParam('agente', false)
     	}
   	triggers {
@@ -18,7 +18,7 @@ job('ejemplo2-job-DSL') {
     		shell("bash jobscript.sh")
     	}
   	publishers {
-      		mailer('macloujulian@gmail.com', true, true)
+      		mailer('jsanmillanunzaga@gmail.com', true, true)
       		slackNotifier {
 		  notifyAborted(true)
 		  notifyEveryFailure(true)
