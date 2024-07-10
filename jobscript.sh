@@ -1,11 +1,11 @@
 #!/bin/bash
-echo "Bienvenido/a al planeta $planeta"
-if [ "$agente" = "true" ]
+echo "Bienvenido a la ciudad $ciudad"
+if [ "$agente" == true ]
 then
-	echo "Prepárese para la misión agente X, que la fuerza te acompañe."
+	echo "Preparese para la misión agente"
 else
-	echo "Disfruta el planeta humano/a $nombre, trata de no morir."
+	echo "Disfrute la ciuadad $nombre"
 fi
 echo "..."
-sleep 10
-echo "¡Suerte! La necesitarás."
+sleep 5
+echo "Hasta luego"
