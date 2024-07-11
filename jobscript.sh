@@ -8,4 +8,4 @@ else
 fi
 echo "..."
 sleep 5
-echo "Hasta luego"
+echo "Hasta luego!!"
