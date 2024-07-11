@@ -12,7 +12,7 @@ job('ejemplo2-dsl-job') {
 	booleanParam('agente', false)
   }
   triggers {
-    cron('H/7 * * * *') // Se ejecuta cada 7 min
+    cron('H/20 * * * *') // Se ejecuta cada 20 min
   }
   steps {
     shell('bash jobscript.sh')

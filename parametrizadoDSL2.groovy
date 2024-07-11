@@ -12,7 +12,7 @@ job('ejemplo-dsl-job2') {
 	booleanParam('agente', false)
   }
   triggers {
-    cron('H/7 * * * *') // Se ejecuta cada 7 min
+    cron('H/20 * * * *') // Se ejecuta cada 20 min
     githubPush()
   }
   steps {
