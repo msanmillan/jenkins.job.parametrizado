@@ -1,4 +1,4 @@
-job('ejemplo-dsl-job') {
+job('ejemplo-dsl-job2') {
   description('Job DSL de ejemplo generado mediante un Seed Job')
   scm {
     git('https://github.com/msanmillan/jenkins.job.parametrizado.git', 'main') { node ->
